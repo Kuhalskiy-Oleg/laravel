@@ -1,0 +1,556 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Test task company -echo- API",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/categories?page={Number page}&per_page={Select count elements}": {
+            "get": {
+                "tags": [
+                    "CategoryImage"
+                ],
+                "summary": "Get list categories",
+                "description": "Get a list of categories with pagination",
+                "operationId": "883851c64d2c9763ab857b4bea2f947f",
+                "parameters": [
+                    {
+                        "name": "Number page",
+                        "in": "path",
+                        "description": "Number page",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "Select count elements",
+                        "in": "path",
+                        "description": "Select count elements",
+                        "required": true,
+                        "schema": {
+                            "required": [
+                                "Select count elements"
+                            ],
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/categories/{id}": {
+            "get": {
+                "tags": [
+                    "CategoryImage"
+                ],
+                "summary": "Get category information",
+                "description": "Get category information by id",
+                "operationId": "ef336795b6aaaf8cd8c9af1a4ac4649c",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "CategoryImage id",
+                        "required": true,
+                        "schema": {
+                            "required": [
+                                "id"
+                            ],
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/copy-images?page={Number page}&per_page={Select count elements}": {
+            "get": {
+                "tags": [
+                    "CopyMiniImage"
+                ],
+                "summary": "Get list copy-images",
+                "description": "Get a list of copy-images with pagination",
+                "operationId": "9ecec7a35d8fd2762131a76e20321adc",
+                "parameters": [
+                    {
+                        "name": "Number page",
+                        "in": "path",
+                        "description": "Number page",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "Select count elements",
+                        "in": "path",
+                        "description": "Select count elements",
+                        "required": true,
+                        "schema": {
+                            "required": [
+                                "Select count elements"
+                            ],
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/copy-images/{id}": {
+            "get": {
+                "tags": [
+                    "CopyMiniImage"
+                ],
+                "summary": "Get copy-images information",
+                "description": "Get copy-images information by id",
+                "operationId": "d2a45dbd6c59deaaac62926ea04f7fca",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "CopyMiniImage id",
+                        "required": true,
+                        "schema": {
+                            "required": [
+                                "id"
+                            ],
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/images?page={Number page}&per_page={Select count elements}": {
+            "get": {
+                "tags": [
+                    "Img"
+                ],
+                "summary": "Get list images",
+                "description": "Get a list of images with pagination",
+                "operationId": "87bd502f96fc8af6d7b30dcb7c99fafa",
+                "parameters": [
+                    {
+                        "name": "Number page",
+                        "in": "path",
+                        "description": "Number page",
+                        "required": true,
+                        "schema": {
+                            "required": [
+                                "Number page"
+                            ],
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "Select count elements",
+                        "in": "path",
+                        "description": "Select count elements",
+                        "required": true,
+                        "schema": {
+                            "required": [
+                                "Select count elements"
+                            ],
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/images": {
+            "post": {
+                "tags": [
+                    "Img"
+                ],
+                "summary": "Upload file images",
+                "description": "Upload file images",
+                "operationId": "2c5567934ee1b1ff9dc485010d6c9e43",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "required": [
+                                    "image"
+                                ],
+                                "properties": {
+                                    "image": {
+                                        "type": "file"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Errors validation",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/images/{id}": {
+            "get": {
+                "tags": [
+                    "Img"
+                ],
+                "summary": "Get image information",
+                "description": "Get image information by id",
+                "operationId": "960d3cc28f6e64ff5ea873ceaba8047c",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Img id",
+                        "required": true,
+                        "schema": {
+                            "required": [
+                                "id"
+                            ],
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Img"
+                ],
+                "summary": "Delete existing image",
+                "description": "Deletes an entry in the 'img', 'media', 'copy_mini_images' tables and deletes files from the server",
+                "operationId": "af8176732f546444393926ab0c28cf12",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Img id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Resource Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/subscribers?page={Number page}&per_page={Select count elements}": {
+            "get": {
+                "tags": [
+                    "Subscriber"
+                ],
+                "summary": "Get list subscribers",
+                "description": "Get a list of subscribers with pagination",
+                "operationId": "6833a555ab477f7bfec621b9c152e8b2",
+                "parameters": [
+                    {
+                        "name": "Number page",
+                        "in": "path",
+                        "description": "Number page",
+                        "required": true,
+                        "schema": {
+                            "required": [
+                                "Number page"
+                            ],
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "Select count elements",
+                        "in": "path",
+                        "description": "Select count elements",
+                        "required": true,
+                        "schema": {
+                            "required": [
+                                "Select count elements"
+                            ],
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/subscribers/{id}": {
+            "get": {
+                "tags": [
+                    "Subscriber"
+                ],
+                "summary": "Get image information",
+                "description": "Get subscriber information by id",
+                "operationId": "5c4306643e9bb73ca92ad80ac1bfbbde",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Subscriber id",
+                        "required": true,
+                        "schema": {
+                            "required": [
+                                "id"
+                            ],
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "CopyMiniImage": {
+                "title": "CopyMiniImage",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "id_img": {
+                        "type": "integer"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "disk": {
+                        "type": "string"
+                    },
+                    "path_in_disk": {
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "type": "string"
+                    },
+                    "updated_at": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "Img": {
+                "title": "Subscribers",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "category_img": {
+                        "type": "integer"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "disk": {
+                        "type": "string"
+                    },
+                    "directory": {
+                        "type": "string"
+                    },
+                    "path_in_disk": {
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "type": "string"
+                    },
+                    "updated_at": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "Subscriber": {
+                "title": "Subscribers",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "slug": {
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "type": "string"
+                    },
+                    "updated_at": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}
