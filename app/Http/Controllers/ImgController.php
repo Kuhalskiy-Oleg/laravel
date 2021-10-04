@@ -32,7 +32,7 @@ class ImgController extends Controller
 
             // создаем запись в бд
             $new_images_db = Img::create([
-                'category_img' => ((string)rand(1,10)),
+                'category_img' => ((string)rand(1, 10)),
                 'disk' => 'media',
             ]);
 
@@ -68,19 +68,19 @@ class ImgController extends Controller
 
             AddImgJob::withChain([
                 new SendMessageJob([
-                    'file_path'=> $file_path,
+                    'file_path' => $file_path,
                     'file_name' => $file_name,
                     'file_path_mini' => $file_path_mini,
                     'file_mini_name' => $file_mini_name,
                 ])
 
             ])
-            ->dispatch([
-                'file_path'=> $file_path,
-                'file_path_mini' => $file_path_mini,
-                'file_mini_name' => $file_mini_name,
-                'id_new_images_db' => $id_new_images_db,
-            ]);
+                ->dispatch([
+                    'file_path' => $file_path,
+                    'file_path_mini' => $file_path_mini,
+                    'file_mini_name' => $file_mini_name,
+                    'id_new_images_db' => $id_new_images_db,
+                ]);
 
 
             // test commit 3
