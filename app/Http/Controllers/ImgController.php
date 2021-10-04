@@ -2,14 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Img;
-use App\Models\Subscriber;
-use App\Models\CategoryImage;
 use App\Jobs\AddImgJob;
 use App\Jobs\SendMessageJob;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\UploadImgFormRequest;
 
 class ImgController extends Controller
