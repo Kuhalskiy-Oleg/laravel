@@ -53,7 +53,7 @@ class ImgController extends Controller
 
         } else {
 
-            return $this->abort(404);
+            return abort(404);
         }
 
         // проверяем есть ли файл который мы загрузили на диске media т.е в папке указанной в конфиге Filesystems
@@ -73,7 +73,6 @@ class ImgController extends Controller
                     'file_path_mini' => $file_path_mini,
                     'file_mini_name' => $file_mini_name,
                 ])
-
             ])
                 ->dispatch([
                     'file_path' => $file_path,
@@ -81,7 +80,6 @@ class ImgController extends Controller
                     'file_mini_name' => $file_mini_name,
                     'id_new_images_db' => $id_new_images_db,
                 ]);
-
 
             // test commit 3
             return redirect()->route('index')->with([
