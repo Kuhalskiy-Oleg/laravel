@@ -26,11 +26,11 @@ class ImgController extends Controller
 
             // записываем в переменную объект файла
             $file_request = $request->file('image');
-            
-            // записываем имя файла 
+
+            // записываем имя файла
             $file_name = $request->file('image')->getClientOriginalName();
-           
-            // создаем запись в бд 
+
+            // создаем запись в бд
             $new_images_db = Img::create([
                 'category_img' => ((string)rand(1,10)),
                 'disk' => 'media',
@@ -48,18 +48,18 @@ class ImgController extends Controller
             // создаем уникальное имя копии файла
             $file_mini_name = 'mini_' . time() . '.' . pathinfo($file_uploaded->file_name, PATHINFO_EXTENSION);
 
-            // создаем путь и название для копирования файла. 
+            // создаем путь и название для копирования файла.
             $file_path_mini = (string)$file_uploaded->id . '/' . $file_mini_name;
 
         } else {
 
             return abort(404);
         }
-    
+
         // проверяем есть ли файл который мы загрузили на диске media т.е в папке указанной в конфиге Filesystems
         if (Storage::disk('media')->exists($file_path)) {
 
-            // обновляем запись в бд 
+            // обновляем запись в бд
             $new_images_db->status = 'Загружено';
             $new_images_db->title = $file_uploaded->file_name;
             $new_images_db->path_in_disk = $file_path;
@@ -71,20 +71,22 @@ class ImgController extends Controller
                     'file_path'=> $file_path,
                     'file_name' => $file_name,
                     'file_path_mini' => $file_path_mini,
-                    'file_mini_name' => $file_mini_name,                  
+                    'file_mini_name' => $file_mini_name,
                 ])
-                
+
             ])
             ->dispatch([
                 'file_path'=> $file_path,
                 'file_path_mini' => $file_path_mini,
                 'file_mini_name' => $file_mini_name,
                 'id_new_images_db' => $id_new_images_db,
-            ]);  
+            ]);
 
+
+            // test commit
             return redirect()->route('index')->with([
                 'fileName' => $file_uploaded->file_name
-            ]);          
-        }  
-    } 
+            ]);
+        }
+    }
 }
