@@ -83,7 +83,7 @@ class ImgController extends Controller
             ]);
 
 
-            // test commit 2
+            // test commit 3
             return redirect()->route('index')->with([
                 'fileName' => $file_uploaded->file_name
             ]);
