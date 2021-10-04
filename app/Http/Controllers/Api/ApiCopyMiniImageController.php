@@ -20,7 +20,7 @@ class ApiCopyMiniImageController extends Controller
      *         name="Number page",
      *         in="path",
      *         description="Number page",
-     *         required=true,  
+     *         required=true,
      *         @OA\Schema(
      *              type="integer",
      *         ),
@@ -29,7 +29,7 @@ class ApiCopyMiniImageController extends Controller
      *         name="Select count elements",
      *         in="path",
      *         description="Select count elements",
-     *         required=true,  
+     *         required=true,
      *         @OA\Schema(
      *              type="integer",
      *              required={"Select count elements"},
@@ -53,7 +53,7 @@ class ApiCopyMiniImageController extends Controller
      *
      * Отображение списка ресурсов с пагинацией.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
     public function index(PaginationFormRequest $request)
     {
@@ -101,7 +101,7 @@ class ApiCopyMiniImageController extends Controller
      * Показать выбранную мини-копию изображения
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return CopyMiniImageResource
      */
     public function show($id)
     {
