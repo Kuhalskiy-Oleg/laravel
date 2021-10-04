@@ -53,7 +53,7 @@ class ImgController extends Controller
 
         } else {
 
-            return abort(404);
+            return $this->abort(404);
         }
 
         // проверяем есть ли файл который мы загрузили на диске media т.е в папке указанной в конфиге Filesystems
@@ -83,7 +83,7 @@ class ImgController extends Controller
             ]);
 
 
-
+            // test commit 2
             return redirect()->route('index')->with([
                 'fileName' => $file_uploaded->file_name
             ]);
